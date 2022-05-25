@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebbb1d3b-56c2-41db-abeb-0a81b36e5a24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/InputField/InputField.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/form/List.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/form/ListItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/controller/ControllerKey.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/css/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/css/_config.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/form/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/form/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/form/ListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/form/ListItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,24 +34,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/muras/WebstormProjects/smart-keller&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\muras\\WebstormProjects\\smart-keller\\project\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/muras/WebstormProjects/smart-keller",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "C:\\Users\\muras\\WebstormProjects\\smart-keller\\project\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\muras\WebstormProjects\smart-keller" />
@@ -78,7 +70,7 @@
       <workItem from="1652684371904" duration="6599000" />
       <workItem from="1653466208331" duration="1155000" />
       <workItem from="1653469974869" duration="631000" />
-      <workItem from="1653470621531" duration="317000" />
+      <workItem from="1653470621531" duration="1975000" />
     </task>
     <servers />
   </component>

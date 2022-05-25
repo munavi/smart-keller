@@ -6,16 +6,13 @@
  */
 
 import InputField from '@/components/InputField/InputField.vue';
+import List from "@/components/form/List.vue";
 
 </script>
 
 <template>
   <main>
-    <label>Label</label>
-    <InputField label="Hey" text="ргргщ" id="4"/>
-    <va-list-item>
-      rvor
-    </va-list-item>
+    <List/>
   </main>
 </template>
 

@@ -8,7 +8,7 @@ This project is a Vue App
 To run this project use this command into project directory:
 
 ```
-npm run serve
+npm run dev
 ```
 
 
