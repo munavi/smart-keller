@@ -1,0 +1,21 @@
+/*
+ * @author    Wolfgang Kowarschick <kowa@hs-augsburg.de>
+ * @author    Natalya Murashko <natalya.murashko@hs-augsburg.de>
+ * @copyright 2016-2022
+ * @license   MIT
+ */
+@import 'config';
+
+html
+{ height:         100%;
+  width:          100%;
+  display:        table;
+}
+
+body
+{ display:        table-cell;
+  text-align:     center;
+  vertical-align: middle;
+  font-size:      $font-size-base !important;
+  font-family:    $font-family-sans;
+}

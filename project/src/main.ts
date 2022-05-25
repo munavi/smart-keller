@@ -1,6 +1,9 @@
-import {createApp} from 'vue'
-
-import App from './App.vue'
+import {createApp} from 'vue';
+import App from './App.vue';
+import { createVuestic } from 'vuestic-ui'
+import 'vuestic-ui/dist/vuestic-ui.css'
 
 const app = createApp(App);
-app.mount('#app')
+app.use(createVuestic());
+app.mount('#app');
+
