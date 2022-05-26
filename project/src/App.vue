@@ -5,12 +5,12 @@
  * @license   MIT
  */
 
-import ProductsData from "@/components/baseDataContent/productsData/ProductsData.vue";
+import Dashboard from "@/components/pages/Dashboard.vue";
 
 </script>
 
 <template>
-    <ProductsData></ProductsData>
+    <Dashboard />
 </template>
 
 <style lang="scss">

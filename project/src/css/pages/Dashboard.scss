@@ -1,0 +1,11 @@
+.dashboard {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 180px minmax(180px,auto) 180px;
+  grid-template-areas:
+  "user timeTracking"
+  "baseData baseData"
+  "order order";
+  margin: 1rem;
+}
