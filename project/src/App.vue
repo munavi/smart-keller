@@ -5,15 +5,12 @@
  * @license   MIT
  */
 
-import InputField from '@/components/InputField/InputField.vue';
-import List from "@/components/form/List.vue";
+import ProductsData from "@/components/baseDataContent/productsData/ProductsData.vue";
 
 </script>
 
 <template>
-  <main>
-    <List/>
-  </main>
+    <ProductsData></ProductsData>
 </template>
 
 <style lang="scss">

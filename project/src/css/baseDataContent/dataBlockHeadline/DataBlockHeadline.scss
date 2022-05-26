@@ -1,20 +1,4 @@
-<template>
- <p class="data-block-headline">{{content}}</p>
-</template>
-
-<script setup lang="ts">
-
-defineProps
-({
-  content: {type: String, required: true}
-})
-
-
-</script>
-
-<style scoped lang="scss">
-.data-block-headline
-{
+.data-bock-headline {
   color: var(--va-primary);
   font-size: 1.2rem;
   @media (max-width: 330px){
@@ -25,4 +9,3 @@ defineProps
   text-transform: uppercase;
   height: 1.5rem;
 }
-</style>

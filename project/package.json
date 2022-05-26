@@ -1,6 +1,6 @@
 {
   "name": "smart-keller",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
     "dev": "vite",
