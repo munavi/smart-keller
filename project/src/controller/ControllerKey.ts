@@ -1,5 +1,6 @@
 /**
  * @author    Wolfgang Kowarschick <kowa@hs-augsburg.de>
+ * @author    Natalya Murashko <natalya.murashko@hs-augsburg.de>
  * @copyright 2016-2022
  * @license   MIT
  */
@@ -63,4 +64,4 @@ class ControllerKey
     }
 }
 
-export default ControllerKey;
+export default ControllerKey

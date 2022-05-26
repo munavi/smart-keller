@@ -1,9 +1,10 @@
 <template>
   <va-list-item
       v-for="(contact, index) in contacts"
-      :key="index">
+      :key="index"
+      class="position">
 
-    <va-list-item-section avatar>
+    <va-list-item-section avatar class="avatar">
       <va-avatar>
         <img :src="contact.img" alt="avatar">
       </va-avatar>
@@ -61,6 +62,18 @@ const
 </script>
 
 
-<style scoped lang="css">
+<style scoped lang="scss">
+.position
+{
+  position: center;
+  background: gray;
+  margin-left:10rem;
+  margin-right:10rem;
+  text-align: center;
+}
 
+.avatar
+{
+  position: relative;
+}
 </style>

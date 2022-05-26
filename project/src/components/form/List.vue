@@ -1,5 +1,5 @@
 <template>
-  <va-list>
+  <va-list className="position">
     <va-list-label>
       Contacts
     </va-list-label>
@@ -12,6 +12,9 @@
 import ListItem from "@/components/form/ListItem.vue";
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.position
+{
+  position: center;
+}
 </style>

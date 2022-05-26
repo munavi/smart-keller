@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbb1d3b-56c2-41db-abeb-0a81b36e5a24" name="Changes" comment="" />
+    <list default="true" id="ebbb1d3b-56c2-41db-abeb-0a81b36e5a24" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project/src/components/header/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/css/form/List.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/css/form/ListItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/form/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/form/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/form/ListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/form/ListItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/controller/ControllerKey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/controller/ControllerKey.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +73,8 @@
       <workItem from="1653466208331" duration="1155000" />
       <workItem from="1653469974869" duration="631000" />
       <workItem from="1653470621531" duration="2521000" />
+      <workItem from="1653482054532" duration="158000" />
+      <workItem from="1653557471655" duration="9000" />
     </task>
     <servers />
   </component>
