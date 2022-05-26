@@ -1,7 +1,7 @@
 <template>
   <div class="base-data">
     <DataBlockHeadline content="Lebensmittel"/>
-    <div class="container">
+    <div class="base-data-container">
       <BaseDataContent label="Nudeln" counter="100"/>
       <BaseDataContent label="Dosen" counter="200"/>
     </div>

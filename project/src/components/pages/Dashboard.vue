@@ -1,7 +1,7 @@
 <template>
   <main>
     <va-content>
-      <div class="dasboard">
+      <div class="dashboard">
         <ProductsData/>
       </div>
     </va-content>
