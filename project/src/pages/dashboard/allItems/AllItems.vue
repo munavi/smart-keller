@@ -6,10 +6,10 @@
 </template>
 
 <script setup lang="ts">
-import DataBlockHeadline from "../../../baseDataContent/dataBlockHeadline/DataBlockHeadline.vue";
+import DataBlockHeadline from "../../../components/dataBlockHeadline/DataBlockHeadline.vue";
 
 </script>
 
 <style scoped lang="scss">
-@import "../../../../css/pages/dashboard/allItems/AllItems";
+@import "../../../css/pages/dashboard/allItems/AllItems";
 </style>

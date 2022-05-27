@@ -17,10 +17,10 @@
 
 <script setup lang="ts">
 
-import DataBlockHeadline from "@/components/baseDataContent/dataBlockHeadline/DataBlockHeadline.vue";
+import DataBlockHeadline from "@/components/dataBlockHeadline/DataBlockHeadline.vue";
 import BaseDataContent from "@/components/baseDataContent/BaseDataContent.vue";
 </script>
 
 <style scoped lang="scss">
-@import "../src/css/baseDataContent/productsData/ProductsData.scss";
+@import "../../../css/pages/dashboard/productsData/ProductsData";
 </style>

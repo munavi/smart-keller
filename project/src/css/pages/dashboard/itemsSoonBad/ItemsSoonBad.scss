@@ -1,0 +1,14 @@
+.items-soon-bad {
+  grid-area: itemsSoonBad;
+  background: yellow;
+  border-radius: 0.5rem;
+  font-size: 3.5rem;
+  color: black;
+
+  &-counter {
+    margin-top: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+}
