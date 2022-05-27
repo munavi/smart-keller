@@ -2,8 +2,15 @@
   <div class="base-data">
     <DataBlockHeadline content="Lebensmittel"/>
     <div class="base-data-container">
-      <BaseDataContent label="Nudeln" counter="100"/>
+      <BaseDataContent label="Tomatendosen" counter="100"/>
       <BaseDataContent label="Dosen" counter="200"/>
+      <BaseDataContent label="Nudeln+Getreide" counter="12"/>
+      <BaseDataContent label="Öle" counter="2"/>
+      <BaseDataContent label="Sauces" counter="3"/>
+      <BaseDataContent label="Milchprodukte" counter="4"/>
+      <BaseDataContent label="Fleischprodukte" counter="2"/>
+      <BaseDataContent label="Obst" counter="5"/>
+      <BaseDataContent label="Gemüse" counter="10"/>
     </div>
   </div>
 </template>

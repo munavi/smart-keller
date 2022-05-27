@@ -1,7 +1,7 @@
 .data-block-headline {
-  color: var(black);
+  color: black;
   font-size: 1.2rem;
-  border-bottom: 0.2rem solid var(black);
+  border-bottom: 0.1rem solid black;
   @media (max-width: 330px){
     font-size: 1rem;
   }

@@ -1,6 +1,6 @@
 .base-data {
   grid-area: baseData;
-  background: var(--va-primary);
+  background: palegreen;
   border-radius: 0.5rem;
   width: 100%;
 
@@ -12,7 +12,7 @@
     .label {
       color: var(--color-background);
       font-size: 1rem;
-      margin: 0 2rem;
+      margin: 0.8rem 2rem;
     }
 
     .counter {

@@ -1,0 +1,14 @@
+.all-items {
+  grid-area: allItems;
+  background: greenyellow;
+  border-radius: 0.5rem;
+  font-size: 3.5rem;
+  color: black;
+
+  &-counter {
+    margin-top: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+}
