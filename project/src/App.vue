@@ -5,7 +5,7 @@
  * @license   MIT
  */
 
-import Dashboard from "@/components/pages/Dashboard.vue";
+import Dashboard from "@/components/pages/dashboard/Dashboard.vue";
 
 </script>
 
