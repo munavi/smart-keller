@@ -13,5 +13,5 @@ defineProps
 </script>
 
 <style scoped lang="scss">
-@import "../../css/components/dataBlockHeadline/DataBlockHeadline";
+@import "/src/css/components/dataBlockHeadline/DataBlockHeadline.scss";
 </style>

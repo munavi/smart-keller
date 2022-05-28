@@ -11,5 +11,5 @@ import DataBlockHeadline from "../../../components/dataBlockHeadline/DataBlockHe
 </script>
 
 <style scoped lang="scss">
-@import "../../../css/pages/dashboard/itemsSoonBad/ItemsSoonBad";
+@import "/src/css/pages/dashboard/itemsSoonBad/ItemsSoonBad.scss";
 </style>

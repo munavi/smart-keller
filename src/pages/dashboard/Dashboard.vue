@@ -15,13 +15,13 @@
 
 <script setup lang="ts">
 
-import ProductsData from "src/pages/dashboard/productsData/ProductsData.vue";
-import AllItems from "src/pages/dashboard/allItems/AllItems.vue";
-import Medicines from "src/pages/dashboard/medicines/Medicines.vue";
-import ItemsSoonBad from "src/pages/dashboard/itemsSoonBad/ItemsSoonBad.vue";
-import ItemsSpioled from "src/pages/dashboard/itemsSpoiled/ItemsSpoiled.vue";
-import Header from "src/components/header/Header.vue";
-import Sidebar from "src/components/header/Sidebar.vue";
+import ProductsData from "@/pages/dashboard/productsData/ProductsData.vue";
+import AllItems from "@/pages/dashboard/allItems/AllItems.vue";
+import Medicines from "@/pages/dashboard/medicines/Medicines.vue";
+import ItemsSoonBad from "@/pages/dashboard/itemsSoonBad/ItemsSoonBad.vue";
+import ItemsSpioled from "@/pages/dashboard/itemsSpoiled/ItemsSpoiled.vue";
+import Header from "@/components/header/Header.vue";
+import {VaCardContent} from "vuestic-ui";
 
 </script>
 

@@ -6,4 +6,3 @@ import 'vuestic-ui/dist/vuestic-ui.css'
 const app = createApp(App);
 app.use(createVuestic());
 app.mount('#app');
-

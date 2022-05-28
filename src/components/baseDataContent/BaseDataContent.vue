@@ -18,5 +18,5 @@ const props = defineProps
 </script>
 
 <style scoped lang="scss">
-@import "../../css/pages/dashboard/productsData/ProductsData";
+@import "/src/css/pages/dashboard/productsData/ProductsData.scss";
 </style>
