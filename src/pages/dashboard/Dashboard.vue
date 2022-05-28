@@ -21,7 +21,8 @@ import Medicines from "@/pages/dashboard/medicines/Medicines.vue";
 import ItemsSoonBad from "@/pages/dashboard/itemsSoonBad/ItemsSoonBad.vue";
 import ItemsSpioled from "@/pages/dashboard/itemsSpoiled/ItemsSpoiled.vue";
 import Header from "@/components/header/Header.vue";
-import {VaCardContent} from "vuestic-ui";
+import router from "@/router";
+
 
 </script>
 

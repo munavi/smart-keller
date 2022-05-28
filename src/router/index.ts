@@ -6,20 +6,20 @@
  */
 
 import { createRouter, createWebHistory } from 'vue-router'
-import Dashboard                           from 'src/pages/dashboard/Dashboard.vue'
+import Dashboard                           from '@/pages/dashboard/Dashboard.vue'
 
 const
     routes =
         [ { path: '/',
             name: 'Home',
-            component: Dashboard,
+            component: () => import('@/pages/dashboard/Dashboard.vue'),
         },
-            { path: '/hello',
-                name: 'Hello',
-                component: () => import('@/view/ViewHello.vue'),
+            { path: '/dashboard',
+                name: 'Dashboard',
+                component: () => import('@/pages/dashboard/Dashboard.vue'),
             },
             { path:      '/:pathMatch(.*)',
-                component: () => import('@/view/View404.vue'),
+                component: () => import('@/pages/page404/Page404.vue'),
             }
         ],
 

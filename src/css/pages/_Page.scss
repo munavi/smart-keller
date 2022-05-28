@@ -1,0 +1,10 @@
+.section
+{ text-align:   center;
+  margin-left:  auto;
+  margin-right: auto;
+
+  &-h1
+  { font-size:     $font-size-h1;
+    margin-bottom: 0.5ex;
+  }
+}
