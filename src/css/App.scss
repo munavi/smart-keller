@@ -6,16 +6,30 @@
  */
 @import 'config';
 
-html
-{ height:         100%;
-  width:          100%;
-  display:        table;
+//html
+//{ height:         100%;
+//  width:          100%;
+//  display:        table;
+//}
+
+*
+{  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
+//body
+//{ display:        table-cell;
+//  text-align:     center;
+//  vertical-align: middle;
+//  font-size:      $font-size-base !important;
+//  font-family:    $font-family-sans;
+//}
+
 body
-{ display:        table-cell;
-  text-align:     center;
-  vertical-align: middle;
-  font-size:      $font-size-base !important;
-  font-family:    $font-family-sans;
+{
+  background-color: var(--va-gray-light);
 }
+
+

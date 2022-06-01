@@ -1,26 +1,17 @@
 <template>
-  <va-navbar color="#C5EFFC" shape>
-    <template #center>
-      <h5>{{ props.name }}</h5>
-    </template>
-    <template #right>
-      <va-button icon-left="clear" color="warning">
-        Logout
-      </va-button>
-    </template>
-  </va-navbar>
+  <Sidebar/>
 </template>
 
 <script setup lang="ts">
 
-import {VaButton, VaNavbar} from "vuestic-ui";
+import Sidebar from "@/components/sidebar/Sidebar.vue";
+import Navbar from "@/components/navbar/Navbar.vue";
 
-const props = defineProps({
-  name: {type: String, required: false}
-})
 
 </script>
 
 <style scoped lang="scss">
-@import "/../smart-keller/src/css/components/header/Header";
+
+@import "/src/css/components/header/Header.scss";
+
 </style>

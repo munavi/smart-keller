@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import Dashboard from "@/pages/dashboard/Dashboard.vue";
-
+import Sidebar from "@/components/sidebar/Sidebar.vue";
 </script>
 
 <template>
-  <nav>
-    <router-link to="/" replace></router-link> |
-    <router-link to="/dashboard"></router-link>
-    <router-link to="/page404"></router-link>
-  </nav>
-  <main>
-    <Dashboard/>
-  </main>
+
+  <router-view/>
 </template>
 
 <style lang="scss">
