@@ -6,6 +6,14 @@
  */
 @import 'config';
 
+:root {
+  --primary: #34c29f;
+  --grey: #5E5E5E;
+  --dark: #313240FF;
+  --dark-alt: #23344a;
+  --light: #e9ebec;
+}
+
 *
 { margin: 0;
   padding: 0;

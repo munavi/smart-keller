@@ -3,11 +3,11 @@
   <div class="menu">
     <router-link to="/" class="button">
       <span class="material-icons">home</span>
-      <span class="text">Home</span>
+      <span class="text">Dashboard</span>
     </router-link>
     <router-link to="/about" class="button">
-      <span class="material-icons">description</span>
-      <span class="text">About</span>
+      <span class="material-icons">playlist_add</span>
+      <span class="text">Liste</span>
     </router-link>
   </div>
 </template>
