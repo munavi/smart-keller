@@ -1,6 +1,6 @@
 <template>
   <va-button color="warning">
-    Logout
+    <span class="material-icons">logout</span>
   </va-button>
 </template>
 

@@ -1,11 +1,11 @@
 <template>
   <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
     <div class="logo">
-      <img :src="logoURL" alt="Smart Keller" />
+      <img src="../../assets/img/logo/smart_keller_logo.png" alt="Smart Keller"/>
     </div>
 
     <div class="menu-toggle-wrap">
-      <button class="menu-toggle" @click="ToggleMenu">
+      <button class="menu-toggle" @click="menuToggle">
         <span class="material-icons">keyboard_double_arrow_right</span>
       </button>
     </div>
@@ -14,18 +14,18 @@
 
     <div class="flex"></div>
     <LogOutButton/>
-
   </aside>
 </template>
 
 
 <script setup lang="ts">
 
-import { ref } from 'vue'
+import {ref} from 'vue'
 import Menu from "@/components/sidebar/menu/Menu.vue";
 import LogOutButton from "@/components/buttons/LogOutButton.vue";
+
 const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
-const ToggleMenu = () => {
+const menuToggle = () => {
   is_expanded.value = !is_expanded.value;
   localStorage.setItem("is_expanded", is_expanded.value.toString());
 }

@@ -18,5 +18,5 @@
 
 <style scoped lang="scss">
 @import "src/css/components/sidebar/Sidebar.scss";
-//@import "src/css/components/sidebar/menu/Menu.scss";
+@import "src/css/components/sidebar/menu/Menu.scss";
 </style>
