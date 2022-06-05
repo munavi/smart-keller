@@ -1,45 +1,38 @@
 <template>
-  <div style="height: 13rem; border: 2px solid var(--va-primary);">
-    <va-sidebar hoverable textColor="dark" minimizedWidth="64px">
-      <va-sidebar-item
-          v-for="item in items"
-          :key="item.to"
-          :active="item.active"
-      >
-        <va-sidebar-item-content>
-          <va-icon :name="item.icon" />
-          <va-sidebar-item-title style="height: 24px;">
-            {{ item.title }}
-          </va-sidebar-item-title>
-        </va-sidebar-item-content>
-      </va-sidebar-item>
-    </va-sidebar>
-  </div>
+  <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
+    <div class="logo">
+      <img :src="logoURL" alt="Smart Keller" />
+    </div>
+
+    <div class="menu-toggle-wrap">
+      <button class="menu-toggle" @click="ToggleMenu">
+        <span class="material-icons">keyboard_double_arrow_right</span>
+      </button>
+    </div>
+
+    <Menu/>
+
+    <div class="flex"></div>
+    <LogOutButton/>
+
+  </aside>
 </template>
 
 
 <script setup lang="ts">
 
-const items = [
-  { title: 'Dashboard', icon: 'dashboard' },
-  { title: 'Sidebar demo', icon: 'room', active: true },
-  { title: 'Loop', icon: 'loop' },
-]
-
+import { ref } from 'vue'
+import Menu from "@/components/sidebar/menu/Menu.vue";
+import LogOutButton from "@/components/buttons/LogOutButton.vue";
+const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
+const ToggleMenu = () => {
+  is_expanded.value = !is_expanded.value;
+  localStorage.setItem("is_expanded", is_expanded.value.toString());
+}
 </script>
 
 <style scoped lang="scss">
 
-.va-sidebar {
-  .va-sidebar__title {
-    transition: opacity 0.2s ease-in-out;
-  }
-
-  &--minimized {
-    .va-sidebar__title {
-      opacity: 0;
-    }
-  }
-}
+@import "/src/css/components/sidebar/Sidebar.scss";
 
 </style>

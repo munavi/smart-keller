@@ -1,6 +1,6 @@
 <template>
   <div class="items-soon-bad">
-    <DataBlockHeadline content="Fast abgelaufene Waren" />
+    <DataBlockHeadline content="Fast Abgel.Waren" />
     <div class="items-soon-bad-counter">{{30}}</div>
   </div>
 </template>

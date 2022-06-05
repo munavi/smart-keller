@@ -1,5 +1,5 @@
 <template>
-  <Sidebar/>
+  <Navbar />
 </template>
 
 <script setup lang="ts">
@@ -13,5 +13,6 @@ import Navbar from "@/components/navbar/Navbar.vue";
 <style scoped lang="scss">
 
 @import "/src/css/components/header/Header.scss";
+
 
 </style>

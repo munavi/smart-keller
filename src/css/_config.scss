@@ -7,7 +7,7 @@
 
 @use 'sass:math';
 
-$background-color:  #C5EFFC;
+$background-color:  var(--light);
 
 $font-family-sans:  Verdana, Helvetica, sans-serif;
 $font-family-serif: "Times New Roman", Times, serif;

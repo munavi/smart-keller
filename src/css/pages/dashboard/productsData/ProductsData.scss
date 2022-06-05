@@ -24,7 +24,7 @@
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1300px) {
   .base-data-container {
     flex-direction: column;
     padding-bottom: 1rem;
@@ -44,7 +44,7 @@
           width: 150px;
           font-size: 1rem;
         }
-        @media (max-width: 364px) {
+        @media (max-width: 434px) {
           text-align: center;
         }
       }
@@ -57,7 +57,7 @@
           width: 150px;
           font-size: 2.5rem;
         }
-        @media (max-width: 364px) {
+        @media (max-width: 434px) {
           text-align: center;
         }
       }
