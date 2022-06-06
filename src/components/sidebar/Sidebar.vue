@@ -3,15 +3,12 @@
     <div class="logo">
       <img src="../../assets/img/logo/smart_keller_logo.png" alt="Smart Keller"/>
     </div>
-
     <div class="menu-toggle-wrap">
       <button class="menu-toggle" @click="menuToggle">
         <span class="material-icons">keyboard_double_arrow_right</span>
       </button>
     </div>
-
     <Menu/>
-
     <div class="flex"></div>
     <LogOutButton/>
   </aside>

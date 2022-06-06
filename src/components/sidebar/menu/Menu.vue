@@ -5,7 +5,7 @@
       <span class="material-icons">home</span>
       <span class="text">Dashboard</span>
     </router-link>
-    <router-link to="/about" class="button">
+    <router-link to="/list" class="button">
       <span class="material-icons">playlist_add</span>
       <span class="text">Liste</span>
     </router-link>

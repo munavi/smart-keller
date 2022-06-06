@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     color: var(--primary);
+    text-shadow: 1px 1px var(--grey);
   }
 
   &-container {
@@ -30,11 +31,12 @@
       font-size: 1.2rem;
       font-weight: bold;
       margin-top: 0.3rem;
+      margin-bottom: 0.7rem;
       color: var(--grey);
     }
 
     .left-text {
-      margin: 0.5rem 0.2rem;
+      margin: 0.6rem 0.5rem;
       font-size: 1.0rem;
       font-weight: bold;
       color: var(--primary);

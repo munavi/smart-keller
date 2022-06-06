@@ -18,7 +18,7 @@ class ControllerKey
      *                     on an HTML element with a matching id and if a key event
      *                     occurs for some of the stated keys.
      * @param p_targets    The id of an HTML element or an array of such ids.
-     * @param p_key_events a key eben or a list of key events: 'keydown', 'keyup' or 'keypress'
+     * @param p_key_events a key eben or a listPage of key events: 'keydown', 'keyup' or 'keypress'
      */
     constructor
     ( p_keys:       string | Array<string>,

@@ -28,5 +28,5 @@ provide("pageName", "Dashboard");
 </script>
 
 <style scoped lang="scss">
-@import "../../css/pages/dashboard/Dashboard";
+@import "../../css/pages/dashboard/DashboardPage";
 </style>
