@@ -19,6 +19,7 @@ h3 {
     text-decoration: none;
     transition: 0.2s ease-in-out;
     padding: 0.5rem 1rem;
+
     .material-icons
     {
       font-size: 2rem;
@@ -33,6 +34,7 @@ h3 {
     &:hover
     {
       background-color: var(--dark-alt);
+
       .material-icons, .text
       {
         color: var(--primary);
@@ -42,6 +44,7 @@ h3 {
     {
       background-color: var(--dark-alt);
       border-right: 5px solid var(--primary);
+
       .material-icons, .text
       {
         color: var(--primary);

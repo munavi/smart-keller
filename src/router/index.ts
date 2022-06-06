@@ -17,6 +17,11 @@ const
                 name: 'Dashboard',
                 component: () => import('@/pages/dashboard/Dashboard.vue'),
             },
+            { path: '/login',
+                name: 'LoginPage',
+                component: () => import('@/pages/loginPage/LoginPage.vue'),
+            },
+
             { path:      '/:pathMatch(.*)',
                 component: () => import('@/pages/page404/Page404.vue'),
             }

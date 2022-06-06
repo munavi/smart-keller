@@ -20,6 +20,13 @@
 
 <script setup lang="ts">
 
+/**
+ * Creating and styling of Sidebar element was based on the code
+ * of the following author
+ * @author  https://github.com/TylerPottsDev/yt-vue-sidebar
+ */
+
+
 import {ref} from 'vue'
 import Menu from "@/components/sidebar/menu/Menu.vue";
 import LogOutButton from "@/components/buttons/LogOutButton.vue";

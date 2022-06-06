@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import Sidebar from "@/components/sidebar/Sidebar.vue";
 
 </script>
 
 <template>
-  <h1>404</h1>
-  <h3>PAGE NOT FOUND</h3>
+  <Sidebar/>
+  <div class="title">
+    <span>404 Page Not Found</span>
+  </div>
 </template>
 
 <style scoped lang="scss">
