@@ -9,22 +9,29 @@
       </p>
       <p class="left-text">E-Mail</p>
       <va-input
+          name="email"
           class="input"
           type="email"
           placeholder=" E-mail eingeben..."
+          v-model="email"
+          @blur="(e) => blurHandler(e)"
+          @change="(e) => {emailHandler(e)}"
+          @keyup.enter="handleLoginClick()"
       />
+      <div v-if="emailDirty && emailError" class="red">{{emailError}}</div>
       <p class="left-text">Password</p>
       <va-input
+          name="password"
           class="input"
           type="password"
           placeholder=" Passwort eingeben..."
+          @change="(e) => passwordHandler(e)"
+          v-model="password"
+          @blur="(e) => {blurHandler(e)}"
+          @keyup.enter="handleLoginClick()"
       />
-
-      <va-button color="primary"
-                 class="login-button">
-        Login
-      </va-button>
-
+      <div v-if="passwordDirty && passwordError" class="red">{{passwordError}}</div>
+      <va-button color="primary" class="login-button" :disabled="!formValid">Login</va-button>
     </div>
   </div>
 
@@ -32,7 +39,7 @@
 
 <script setup lang="ts">
 
-import {ref} from "vue";
+import {ref, watchEffect} from "vue";
 
 const email = ref(""),
     password = ref(""),
@@ -42,8 +49,12 @@ const email = ref(""),
     passwordError = ref("Passwort darf nicht leer sein"),
     formValid = ref(false);
 
-const blurHandler = (event: any) => {
-  switch (event.target.name) {
+watchEffect(() => {
+  formValid.value = !(emailError.value || passwordError.value);
+})
+
+const blurHandler = ($event: any) => {
+  switch ($event.target.name) {
     case "email": {
       emailDirty.value = true;
       break;
@@ -60,7 +71,7 @@ const blurHandler = (event: any) => {
 * https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
 */
 const emailHandler = (event: any) => {
-  const notCorrectEmail: string = "Bitte gib eine korrekte E-Mail ein";
+  const notCorrectEmail: string = "Bitte geben Sie eine korrekte E-Mail ein";
   email.value = event.target.value;
   const re: RegExp =
       /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
@@ -73,7 +84,7 @@ const emailHandler = (event: any) => {
 
 const passwordHandler = (event: any) => {
   password.value = event.target.value;
-  const passwordMin: string = "Dein Passwort muss aus mindestens 6 Symbolen bestehen";
+  const passwordMin: string = "Ihr Passwort muss aus mindestens 6 Symbolen bestehen";
   const passwordEmpty: string = "Passwort darf nicht leer sein";
   if (event.target.value.length < 6) {
     passwordError.value = passwordMin;
@@ -84,6 +95,14 @@ const passwordHandler = (event: any) => {
     passwordError.value = "";
   }
 }
+
+const handleLoginClick = async () => {
+  const falsePassword: string = "das Passwort ist falsch";
+  const notUser: string = "Nutzer existiert nicht";
+  const loginError: string = "Ein Fehler ist aufgetreten. Bitte versuche es spaeter erneut";
+  console.log("HandleLoginclick");
+
+};
 
 </script>
 
