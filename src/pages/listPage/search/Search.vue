@@ -1,10 +1,14 @@
 <template>
-  <div class="search-container">
-      <va-input type="text" placeholder="Suchen" name="search"/>
-      <va-button  @click="" color="primary">
-        <span class="material-icons">search</span>
-      </va-button>
-  </div>
+  <main>
+    <va-content>
+      <div class="search">
+        <va-input type="text" placeholder="Suchen" name="search" class="input"/>
+        <va-button @click="" color="primary" class="button">
+          <span class="material-icons">search</span>
+        </va-button>
+    </div>
+    </va-content>
+  </main>
 </template>
 
 <script setup lang="ts">

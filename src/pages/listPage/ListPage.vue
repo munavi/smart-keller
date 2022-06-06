@@ -2,6 +2,7 @@
   <Sidebar/>
   <div>
     <Search/>
+    <List/>
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 
 import Search from "@/pages/listPage/search/Search.vue";
 import Sidebar from "@/components/sidebar/Sidebar.vue";
+import List from "@/pages/listPage/list/List.vue";
 </script>
 
 <style scoped lang="scss">

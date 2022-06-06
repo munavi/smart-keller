@@ -1,0 +1,35 @@
+<template>
+  <div>
+    <va-list>
+      <va-list-label>
+        Lebensmittelvorrat
+      </va-list-label>
+      <va-list-item
+          v-for="(product, index) in products"
+          :key="index"
+      >
+        <ListItem :label=product.label :counter=product.counter></ListItem>
+      </va-list-item>
+    </va-list>
+  </div>
+</template>
+
+<script setup lang="ts">
+
+import ListItem from "@/pages/listPage/list/listItem/ListItem.vue";
+
+const products = [
+  {label: "Nudeln", counter: 10},
+  {label: "Tomatendosen", counter: 10},
+  {label: "Medikamenten", counter: 10},
+  {label: "Öl", counter: 1},
+  {label: "Fleischprodukte", counter: 10},
+]
+
+const data: string = "blable";
+
+</script>
+
+<style scoped lang="scss">
+
+</style>
