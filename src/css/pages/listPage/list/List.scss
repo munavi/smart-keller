@@ -1,0 +1,10 @@
+.list {
+  display: grid;
+  width: 300px;
+
+  .list-item{
+    background-color: grey;
+    height: 4rem;
+    width: 20rem;
+  }
+}
