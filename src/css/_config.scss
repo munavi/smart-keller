@@ -12,7 +12,7 @@ $background-color:  var(--light);
 $font-family-sans:  Verdana, Helvetica, sans-serif;
 $font-family-serif: "Times New Roman", Times, serif;
 
-$font-size-base:    3vw;
+$font-size-base:    0.7vw;
 $font-size-factor:  1.25;  // cmp. https://type-scale.com/
 
 $font-size-h5:      math.pow($font-size-factor,1)*$font-size-base;

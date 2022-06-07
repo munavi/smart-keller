@@ -1,10 +1,10 @@
 <template>
   <div>
     <va-list-item class="list-item">
-      <va-button @click="" color="primary" class="button">
+      <va-button @click="" color="primary">
         <span class="material-icons">edit</span>
       </va-button>
-      <va-list-item-section label>
+      <va-list-item-section class="label">
         <va-list-item-label>
           {{ props.label }}
         </va-list-item-label>
@@ -14,7 +14,7 @@
           {{ props.counter }}
         </va-list-item-label>
       </va-list-item-section>
-      <va-button @click="" color="warning" class="delete-button">
+      <va-button @click="" color="warning">
         <span class="material-icons">delete</span>
       </va-button>
     </va-list-item>

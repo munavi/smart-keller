@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <va-list>
-      <va-list-label>
+      <va-list-label class="name">
         Lebensmittelvorrat
       </va-list-label>
       <va-list-item

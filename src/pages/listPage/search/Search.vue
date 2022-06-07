@@ -4,11 +4,13 @@
         <va-button  @click="" color="primary" class="button">
           <span class="material-icons">search</span>
         </va-button>
+        <Modal/>
     </div>
 </template>
 
 <script setup lang="ts">
 
+import Modal from "@/pages/listPage/modal/Modal.vue";
 </script>
 
 <style scoped lang="scss">

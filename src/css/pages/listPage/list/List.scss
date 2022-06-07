@@ -1,7 +1,10 @@
+@import "src/css/config";
+
 .list {
   grid-area: listItems;
-  width: 20rem;
+  width: auto;
 
-
-
+  .name {
+    font-size: 1.5rem;
+  }
 }
