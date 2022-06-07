@@ -1,0 +1,11 @@
+.list-page {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 21rem;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+  "search"
+  "listItems";
+  justify-content: center;
+  margin: 1.2rem 1rem;
+}

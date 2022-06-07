@@ -1,9 +1,13 @@
 <template>
   <Sidebar/>
-  <div>
-    <Search/>
-    <List/>
-  </div>
+  <main>
+    <va-content>
+      <div class="list-page">
+        <Search/>
+        <List/>
+      </div>
+    </va-content>
+  </main>
 </template>
 
 <script setup lang="ts">

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <va-list class="list">
+  <div class="list">
+    <va-list>
       <va-list-label>
         Lebensmittelvorrat
       </va-list-label>

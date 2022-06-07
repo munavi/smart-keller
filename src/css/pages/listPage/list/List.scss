@@ -1,10 +1,7 @@
 .list {
-  display: grid;
-  width: 300px;
+  grid-area: listItems;
+  width: 20rem;
 
-  .list-item{
-    background-color: grey;
-    height: 4rem;
-    width: 20rem;
-  }
+
+
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <va-list-item>
+    <va-list-item class="list-item">
       <va-button @click="" color="primary" class="button">
         <span class="material-icons">edit</span>
       </va-button>
@@ -17,7 +17,6 @@
       <va-button @click="" color="warning" class="delete-button">
         <span class="material-icons">delete</span>
       </va-button>
-
     </va-list-item>
   </div>
 </template>
