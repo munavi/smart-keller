@@ -7,11 +7,12 @@
         no-outside-dismiss
     >
       <template #header>
-        <h2>Custom header</h2>
+        <h2>Produktinformation</h2>
       </template>
-      <div>{{ message }}</div>
+        <h2>Kategorie</h2>
+      <Category/>
       <template #footer>
-        <va-button @click="emitFunction" >
+        <va-button @click="emitCloseModal" >
           Close
         </va-button>
       </template>
@@ -21,17 +22,17 @@
 
 <script setup lang="ts">
 
+import Category from "@/pages/listPage/modal/form/category/Category.vue";
+
 const props = defineProps
 ({
   isOpen: {type: Boolean, required: true},
   onClose: {type: Function, required: true}
 })
 
-let message = "Message in Modal";
-
 const
     emit = defineEmits(['closeModal']),
-    emitFunction = () => emit('closeModal');
+    emitCloseModal = () => emit('closeModal');
 
 
 </script>
