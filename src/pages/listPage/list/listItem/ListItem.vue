@@ -1,8 +1,9 @@
 <template>
   <div>
     <va-list-item class="list-item">
-      <va-button @click="" color="primary">
+      <va-button @click="modalIsOpen = true; click" color="primary">
         <span class="material-icons">edit</span>
+        <Modal :isOpen=modalIsOpen :onClose= closeModal />
       </va-button>
       <va-list-item-section class="label">
         <va-list-item-label>
@@ -23,11 +24,27 @@
 
 <script setup lang="ts">
 
+
+import {ref} from "vue";
+import Modal from "@/pages/listPage/modal/Modal.vue";
+
 const props = defineProps
 ({
   label: {type: String, required: true},
-  counter: {type: Number, required:true}
+  counter: {type: Number, required: true}
 })
+
+const
+    emit = defineEmits(['click']),
+    click = () => emit('click');
+
+
+const
+    modalIsOpen = ref(false),
+    closeModal = () => {
+      modalIsOpen.value = false;
+    };
+
 
 </script>
 

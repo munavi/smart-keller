@@ -4,7 +4,6 @@
         <va-button  @click="" color="primary" class="button">
           <span class="material-icons">search</span>
         </va-button>
-        <Modal/>
     </div>
 </template>
 

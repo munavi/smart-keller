@@ -13,7 +13,7 @@ const
             name: 'Home',
             component: () => import('@/pages/dashboard/DashboardPage.vue'),
         },
-            { path: '/dashboard',
+            { path: '/home',
                 name: 'Dashboard',
                 component: () => import('@/pages/dashboard/DashboardPage.vue'),
             },
