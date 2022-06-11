@@ -1,9 +1,9 @@
 <template>
   <div>
     <va-list-item class="list-item">
-      <va-button @click="modalIsOpen = true; click" color="primary">
+      <va-button @click="modalIsOpen = true" color="primary">
         <span class="material-icons">edit</span>
-        <Modal :isOpen=modalIsOpen :onClose= closeModal />
+        <Modal :isOpen=modalIsOpen :onClose= closeModal @close-modal="modalIsOpen = false" />
       </va-button>
       <va-list-item-section class="label">
         <va-list-item-label>
@@ -33,10 +33,6 @@ const props = defineProps
   label: {type: String, required: true},
   counter: {type: Number, required: true}
 })
-
-const
-    emit = defineEmits(['click']),
-    click = () => emit('click');
 
 
 const

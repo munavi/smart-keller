@@ -11,8 +11,8 @@
       </template>
       <div>{{ message }}</div>
       <template #footer>
-        <va-button @onClick="props.onClose">
-          Custom action
+        <va-button @click="emitFunction" >
+          Close
         </va-button>
       </template>
     </va-modal>
@@ -28,6 +28,10 @@ const props = defineProps
 })
 
 let message = "Message in Modal";
+
+const
+    emit = defineEmits(['closeModal']),
+    emitFunction = () => emit('closeModal');
 
 
 </script>
