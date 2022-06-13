@@ -1,12 +1,17 @@
 .list-item {
   background-color: grey;
   height: 4rem;
-  width: 20rem;
+  width: 30rem;
   border-radius: 15px;
 
   .label {
     justify-content: center;
     align-items: center;
+  }
+
+  .counter {
+    margin-right: 2rem;
+    background-color: #C5EFFC;
   }
 
 }

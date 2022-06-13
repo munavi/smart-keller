@@ -9,7 +9,7 @@
           :key="index"
           class="list-item"
       >
-        <ListItem :label=product.label :counter=product.counter></ListItem>
+        <ListItem :label=product.label :counter = product.counter></ListItem>
       </va-list-item>
     </va-list>
   </div>

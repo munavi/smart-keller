@@ -3,17 +3,17 @@
     <va-list-item class="list-item">
       <va-button @click="modalIsOpen = true" color="primary">
         <span class="material-icons">edit</span>
-        <Modal :isOpen=modalIsOpen :onClose= closeModal @close-modal="modalIsOpen = false" />
+        <Modal :isOpen=modalIsOpen :onClose=closeModal @close-modal="modalIsOpen = false"/>
       </va-button>
       <va-list-item-section class="label">
         <va-list-item-label>
           {{ props.label }}
         </va-list-item-label>
       </va-list-item-section>
-      <va-list-item-section icon>
-        <va-list-item-label>
-          {{ props.counter }}
-        </va-list-item-label>
+      <va-list-item-section class="counter">
+        <va-counter v-model="props.counter"
+                    manual-input
+        />
       </va-list-item-section>
       <va-button @click="" color="warning">
         <span class="material-icons">delete</span>
@@ -27,6 +27,7 @@
 
 import {ref} from "vue";
 import Modal from "@/pages/listPage/modal/Modal.vue";
+import Counter from "@/pages/listPage/modal/form/Counter.vue";
 
 const props = defineProps
 ({

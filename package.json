@@ -13,7 +13,7 @@
     "uuid": "^8.3.2",
     "vue": "^3.2.33",
     "vue-router": "^4.0.14",
-    "vuestic-ui": "^1.4.0"
+    "vuestic-ui": "^1.4.1"
   },
   "devDependencies": {
     "@mdi/font": "^6.6.96",

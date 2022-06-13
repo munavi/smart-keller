@@ -11,6 +11,8 @@
       </template>
         <h2>Kategorie</h2>
       <Category/>
+      <h2>Anzahl</h2>
+     <Counter :counter=10 />
       <template #footer>
         <va-button @click="emitCloseModal" >
           Close
@@ -23,6 +25,7 @@
 <script setup lang="ts">
 
 import Category from "@/pages/listPage/modal/form/category/Category.vue";
+import Counter from "@/pages/listPage/modal/form/Counter.vue";
 
 const props = defineProps
 ({
