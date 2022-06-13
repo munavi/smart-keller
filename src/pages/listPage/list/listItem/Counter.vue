@@ -2,7 +2,6 @@
     <va-counter
         v-model="props.counter"
         manual-input
-        messages="Manual-input"
     />
 </template>
 

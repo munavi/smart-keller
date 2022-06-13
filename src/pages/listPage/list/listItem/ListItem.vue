@@ -25,9 +25,8 @@
 <script setup lang="ts">
 
 
-import {ref} from "vue";
+import {ref, watch} from "vue";
 import Modal from "@/pages/listPage/modal/Modal.vue";
-import Counter from "@/pages/listPage/modal/form/Counter.vue";
 
 const props = defineProps
 ({
@@ -35,6 +34,11 @@ const props = defineProps
   counter: {type: Number, required: true}
 })
 
+const counter = ref(props.counter);
+
+watch(() => counter, (selection, prevSelection) => {
+  console.log(selection, prevSelection);
+})
 
 const
     modalIsOpen = ref(false),

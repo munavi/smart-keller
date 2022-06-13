@@ -11,7 +11,7 @@ import {CategoryType} from "@/pages/listPage/modal/form/category/CategoryType";
 import {ref} from "vue";
 
 const
-    value = ref(""),
+    value = ref("Lebensmittel"),
     categories = Object.values(CategoryType);
 
 </script>

@@ -15,7 +15,7 @@
 import Search from "@/pages/listPage/search/Search.vue";
 import Sidebar from "@/components/sidebar/Sidebar.vue";
 import List from "@/pages/listPage/list/List.vue";
-import Counter from "@/pages/listPage/modal/form/Counter.vue";
+import Counter from "@/pages/listPage/modal/form/counter/Counter.vue";
 </script>
 
 <style scoped lang="scss">

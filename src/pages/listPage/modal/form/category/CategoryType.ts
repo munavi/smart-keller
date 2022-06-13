@@ -1,7 +1,7 @@
 export enum CategoryType {
-    PASTA ="Nudeln",
-    CEREAL ="Getreide",
-    OIL= "Öl",
+    PASTA = "Nudeln",
+    CEREAL = "Getreide",
+    OIL = "Öl",
     CANNED_FOOD = "Konserven",
     MILK_PRODUCT = "Milchprodukte",
     MEAT_PRODUCT = "Fleischprodukte",
@@ -16,4 +16,4 @@ export const CategoryTypeList: {
     key: string;
     value: string;
 }[] = Object.entries(CategoryType)
-    .map(([key, value]) => ({ key, value }));
+    .map(([key, value]) => ({key, value}));
