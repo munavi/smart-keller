@@ -11,9 +11,7 @@
         </va-list-item-label>
       </va-list-item-section>
       <va-list-item-section class="counter">
-        <va-counter v-model="props.counter"
-                    manual-input
-        />
+        <Counter :counter=props.counter />
       </va-list-item-section>
       <va-button @click="" color="warning">
         <span class="material-icons">delete</span>
@@ -27,6 +25,7 @@
 
 import {ref, watch} from "vue";
 import Modal from "@/pages/listPage/modal/Modal.vue";
+import Counter from "@/pages/listPage/modal/form/counter/Counter.vue";
 
 const props = defineProps
 ({

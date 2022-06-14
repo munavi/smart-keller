@@ -2,10 +2,11 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: auto;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr auto auto;
   grid-template-areas:
   "search"
-  "listItems";
+  "listItems"
+  "add";
   justify-content: center;
   margin: 1.2rem 1rem;
 }

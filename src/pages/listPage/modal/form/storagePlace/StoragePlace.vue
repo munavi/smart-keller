@@ -10,7 +10,7 @@
 
 import {ref} from "vue";
 
-const value = ref("Lagerort");
+const value = ref("");
 
 </script>
 

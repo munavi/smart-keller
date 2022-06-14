@@ -5,6 +5,7 @@
       <div class="list-page">
         <Search/>
         <List/>
+        <NewProduct />
       </div>
     </va-content>
   </main>
@@ -16,6 +17,7 @@ import Search from "@/pages/listPage/search/Search.vue";
 import Sidebar from "@/components/sidebar/Sidebar.vue";
 import List from "@/pages/listPage/list/List.vue";
 import Counter from "@/pages/listPage/modal/form/counter/Counter.vue";
+import NewProduct from "@/pages/listPage/newProduct/NewProduct.vue";
 </script>
 
 <style scoped lang="scss">
