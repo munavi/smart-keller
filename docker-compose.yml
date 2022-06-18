@@ -1,0 +1,75 @@
+version: "3"
+
+services:
+  frontend:
+    container_name: frontend_${IMAGE_TAG}
+    image: frontend_${IMAGE_TAG}
+    build:
+      context: ./frontend
+      args:
+        PORT: ${FRONTEND_CONTAINER_PORT}
+    ports:
+      - ${FRONTEND_PORT}:${FRONTEND_CONTAINER_PORT}
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./frontend/src:/frontend/src
+      - ./frontend/public:/frontend/public
+    depends_on:
+      - backend_${IMAGE_TAG}
+
+  backend:
+    container_name: backend_${IMAGE_TAG}
+    image: backend_${IMAGE_TAG}
+    build:
+      context: ./backend
+      args:
+        PORT:                 ${BACKEND_CONTAINER_PORT}
+        ACCESS_TOKEN_SECRET:  ${ACCESS_TOKEN_SECRET}
+        REFRESH_TOKEN_SECRET: ${REFRESH_TOKEN_SECRET}
+        PG_USER:              ${APP_USER}
+        PG_PASSWORD:          ${APP_PASSWORD}
+        PG_DATABASE:          ${APP_DATABASE}
+        PG_HOSTNAME:          'database'
+        PG_PORT:              ${DATABASE_PORT}
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_CONTAINER_PORT}
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./backend/src:/backend/src
+    depends_on:
+      - database_${IMAGE_TAG}
+
+  database:
+    container_name: database_${IMAGE_TAG}
+    image: database_${IMAGE_TAG}
+    build:
+      context: ./database
+      args:
+        POSTGRES_USER:     ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+        POSTGRES_DATABASE: ${POSTGRES_DATABASE}
+        APP_USER:          ${APP_USER}
+        APP_PASSWORD:      ${APP_PASSWORD}
+        APP_DATABASE:      ${APP_DATABASE}
+        WEB_USER:          ${WEB_USER}
+        WEB_PASSWORD:      ${WEB_PASSWORD}
+    ports:
+      - ${DATABASE_PORT}:${DATABASE_CONTAINER_PORT}
+    depends_on:
+      - adminer_${IMAGE_TAG}
+
+  adminer:
+    container_name: adminer_${IMAGE_TAG}
+    image: adminer_${IMAGE_TAG}
+    build:
+      context: ./adminer
+      args:
+        ADMINER_DEFAULT_DATABASE_DRIVER: pgsql
+        ADMINER_DEFAULT_SERVER:          database
+        ADMINER_DEFAULT_USER:            ${APP_USER}
+        ADMINER_DEFAULT_DATABASE_NAME:   ${APP_DATABASE}
+        ADMINER_DESIGN: rmsoft
+    ports:
+      - ${ADMINER_PORT}:${ADMINER_CONTAINER_PORT}
