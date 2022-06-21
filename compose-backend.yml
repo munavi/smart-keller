@@ -13,7 +13,7 @@ services:
         PG_USER:              ${APP_USER}
         PG_PASSWORD:          ${APP_PASSWORD}
         PG_DATABASE:          ${APP_DATABASE}
-        PG_HOSTNAME:          'database'
+        PG_HOST:              'database'
         PG_PORT:              ${DATABASE_PORT}
     ports:
       - ${BACKEND_PORT}:${BACKEND_CONTAINER_PORT}
@@ -47,10 +47,10 @@ services:
     build:
       context: ./adminer
       args:
-        ADMINER_DEFAULT_DATABASE_DRIVER: pgsql
-        ADMINER_DEFAULT_SERVER:          database
-        ADMINER_DEFAULT_USER:            ${APP_USER}
-        ADMINER_DEFAULT_DATABASE_NAME:   ${APP_DATABASE}
+        ADMINER_DEFAULT_DB_DRIVER: pgsql
+        ADMINER_DEFAULT_DB_HOST:   database
+        ADMINER_DEFAULT_DB_NAME:   ${APP_DATABASE}
+        ADMINER_DEFAULT_USER:      ${APP_USER}
         ADMINER_DESIGN: rmsoft
     ports:
       - ${ADMINER_PORT}:${ADMINER_CONTAINER_PORT}

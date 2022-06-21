@@ -9,10 +9,10 @@
           class="input"
           type="email"
           placeholder="E-Mail eingeben..."
-          v-model="email"
+          v-model="user.email"
           @blur="(e) => blurHandler(e)"
           @change="(e) => {emailHandler(e)}"
-          @keyup.enter="handleLoginClick()"
+          @keyup.enter="handleLoginClick"
       />
       <div v-if="emailDirty && emailError" class="red">{{ emailError }}</div>
       <p class="left-text">Password</p>
@@ -22,12 +22,12 @@
           type="password"
           placeholder="Passwort eingeben..."
           @change="(e) => passwordHandler(e)"
-          v-model="password"
+          v-model="user.password"
           @blur="(e) => {blurHandler(e)}"
-          @keyup.enter="handleLoginClick()"
+          @keyup.enter="handleLoginClick"
       />
       <div v-if="passwordDirty && passwordError" class="red">{{ passwordError }}</div>
-      <va-button color="primary" class="login-button" :disabled="!formValid">Login</va-button>
+      <va-button color="primary" class="login-button" :disabled="!formValid" @click="handleLoginClick">Login</va-button>
     </form>
   </div>
 
@@ -36,6 +36,22 @@
 <script setup lang="ts">
 
 import {ref, watchEffect} from "vue";
+import Router from "../../router";
+import StoreUser from "../../store/StoreUser";
+
+const
+    router    = Router(),
+    storeUser = StoreUser(),
+    user      = storeUser.user,
+    login     = storeUser.login,
+    error     = ref(false),
+    doLogin   = async () =>
+    { const success = await login();
+      error.value = !success;
+      if (success)
+      { await router.push('/dashboard') }
+    }
+
 
 const email = ref(""),
     password = ref(""),
@@ -96,7 +112,10 @@ const handleLoginClick = async () => {
   const falsePassword: string = "das Passwort ist falsch";
   const notUser: string = "Nutzer existiert nicht";
   const loginError: string = "Ein Fehler ist aufgetreten. Bitte versuche es spaeter erneut";
-  console.log("HandleLoginclick");
+  console.log("BlablaLOgin");
+  console.log(user.email);
+  console.log(user.password);
+  await doLogin();
 
 };
 

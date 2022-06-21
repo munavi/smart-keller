@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vuestic/ag-grid-theme": "^1.0.3",
+    "jwt-decode": "^3.1.2",
     "pinia": "^2.0.13",
     "uuid": "^8.3.2",
     "vue": "^3.2.33",

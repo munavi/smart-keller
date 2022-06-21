@@ -1,14 +1,9 @@
 {
-  "name": "smart-keller",
-  "version": "1.2.0",
-  "author": "Nataya Murashko",
+  "name": "wk_account_express_01",
+  "version": "1.1.2",
+  "author": "Wolfgang L. J. Kowarschick",
   "license": "MIT",
-  "keywords": [
-    "express",
-    "smart-keller",
-    "postgres"
-  ],
-  "description": "Express",
+  "description": "Express: account REST api based on Postgres",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
@@ -17,14 +12,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.multimedia.hs-augsburg.de/namu1848/smart-keller"
+    "url": "https://gitlab.multimedia.hs-augsburg.de/kowa/wk_account_fullstack"
   },
+  "keywords": [
+    "express",
+    "account",
+    "login",
+    "JSON",
+    "REST",
+    "Postgres"
+  ],
   "devDependencies": {
     "nodemon": "^2.0.16"
   },
   "dependencies": {
-    "dotenv": "^16.0.0",
+    "ajv-formats": "^2.1.1",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "pg": "^8.7.3"
+    "express-json-validator-middleware": "^3.0.1",
+    "express-promise-router": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "pg-error": "^1.1.0",
+    "uuid": "^8.3.2"
   }
 }

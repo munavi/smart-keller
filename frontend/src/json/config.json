@@ -1,0 +1,51 @@
+{ "apiRoot":         "/api/$1",
+
+  "paths":
+  { "register": "/api/register",
+    "login":    "/api/login",
+    "accounts": "/api/accounts"
+  },
+
+  "constraintErrorMessages":
+  { "":
+    { "properties": [], 
+      "message":    null
+    },
+    "account_check_username":
+    { "properties": ["user"], 
+      "message":    "Der Benutzername darf nicht leer sein."
+    },    
+    "account_unique_username": 
+    { "properties": ["user"], 
+      "message":    "Den Benutzernamen gibt es schon."
+    },
+    "account_unique_email":    
+    { "properties": ["email"], 
+      "message":    "Die E-Mail-Adresse gibt es schon."
+    },
+    "account_check_username_email":
+    { "properties": ["user", "email"], 
+      "message":    "Benutername und E-Mail-Adresse dürfen nicht beide leer sein."
+    },
+    "account_check_password_not_null":
+    { "properties": ["password"], 
+      "message":    "Das Passwort fehlt."
+    },
+    "account_exists":
+    { "properties": ["password"], 
+      "message":    "Die angegebenen USER-ID existiert nicht."
+    },
+    "account_one_admin_exists":
+    { "properties": ["isAdmin"], 
+      "message":    "Es muss mindestens einen Admin-Account geben."
+    },   
+    "d_untainted_check":
+    { "properties": ["user", "name"], 
+      "message":    "Namen dürfen keine Sonderzeichen (<>\"') und Kommentarbegrenzer enthalten."
+    },
+    "d_email_check":
+    { "properties": ["email"], 
+      "message":    "Die E-Mail-Adresse ist fehlerhaft."
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@host = http://localhost:4000/v1
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3YzhhOTFkLWZhMzYtNDYyNi1hMjA4LWM3NDYyNzVlYjE2OSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NTUyMTE4MTUsImV4cCI6MTY1NTIxMzYxNX0.lTMQO29-xH6axJRKFWg1Cubco9MZ3HPtX55JXMHBMdg
+@id    = 85fe7e50-80df-43ba-bf1b-1db63fcb53a8
+
+###
+GET http://localhost:4000/v1/uuid
+
+###
+GET {{host}}/uuid
+
+###
+POST {{host}}/login
+
+###
+POST {{host}}/register
+content-type: application/json
+
+{ "name":     "Wolfgang Kowarschick",
+  "email":    "kowa@hs-augsburg.de",
+  "user":     "kowa",
+  "password": "geheim"
+}
+
+###
+POST {{host}}/login
+content-type: application/json
+
+{ "user":     "admin",
+  "password": "changeit"
+}
+
+###
+POST {{host}}/login
+content-type: application/json
+
+{ "user":     "redak",
+  "password": "changeit"
+}
+
+###
+POST {{host}}/login
+content-type: application/json
+
+{ "user":     "kowa",
+  "password": "geheim"
+}
+
+###
+GET {{host}}/accounts
+authorization: {{token}}
+
+###
+GET {{host}}/accounts/{{id}}
+authorization: {{token}}
+
+###
+POST {{host}}/accounts
+authorization: {{token}}
+content-type: application/json
+
+{ "name":     "Test",
+  "email":    "kowa@hs-augsburg.de",
+  "user":     "test",
+  "password": "test"
+}
+
+###
+POST {{host}}/accounts
+authorization: {{token}}
+content-type: application/json
+
+{ "name":     "Test",
+  "email":    "test@hs-augsburg.de",
+  "user":     "test",
+  "password": "test"
+}
+
+###
+GET {{host}}/accounts?search=tes
+authorization: {{token}}
+
+###
+PUT {{host}}/accounts/{{id}}
+authorization: {{token}}
+content-type: application/json
+
+{ "name":     "WK",
+  "email":    "wk@hs-augsburg.de",
+  "user":     "testwk",
+  "password": "test"
+}
+
+###
+PATCH {{host}}/accounts/{{id}}
+authorization: {{token}}
+content-type: application/json
+
+{ "email": "wljk@hs-augsburg.de",
+  "user":  null
+}
+
+###
+PATCH {{host}}/accounts/{{id}}
+authorization: {{token}}
+content-type: application/json
+
+{ "isAdmin": true }
+
+###
+DELETE {{host}}/accounts/{{id}}
+authorization: {{token}}

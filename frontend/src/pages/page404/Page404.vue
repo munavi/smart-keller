@@ -6,7 +6,8 @@ import Sidebar from "../../components/sidebar/Sidebar.vue";
 <template>
   <Sidebar/>
   <div class="title">
-    <span>404 Page Not Found</span>
+    <span>404</span>
+    <text> Page Not Found</text>
   </div>
 </template>
 

@@ -31,7 +31,7 @@ services:
         PG_USER:              ${APP_USER}
         PG_PASSWORD:          ${APP_PASSWORD}
         PG_DATABASE:          ${APP_DATABASE}
-        PG_HOSTNAME:          'database_production'
+        PG_HOST:              'database_production'
         PG_PORT:              ${DATABASE_PORT}
     ports:
       - ${BACKEND_PORT}:${BACKEND_CONTAINER_PORT}

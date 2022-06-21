@@ -1,80 +1,55 @@
 import express from 'express'
-import path    from 'path'
-import pg       from 'pg'
+import morgan from 'morgan'
 
-//import morgan  from 'morgan'
-
-let db;
+import * as uuid from 'uuid'
+import {auth} from './routes/auth.js'
+import {accounts} from './routes/accounts.js'
+import {ValidationError} from 'express-json-validator-middleware'
 
 const
-    { PORT        = 3000,
-        SERVER      = `http://localhost:${PORT}`,
-        PG_HOSTNAME = 'localhost',
-        PG_USER     = 'web',
-        PG_PASSWORD = 'web',
-        PG_DATABASE = 'hello',
-        PG_PORT     =  5432,
-    }             = process.env,
-    c_app         = express(),
-    c_dirname     = path.resolve(path.dirname(process.argv[1])),
-    c_pool        = new pg.Pool
-    ({"host":     PG_HOSTNAME,
-        "user":     PG_USER,
-        "password": PG_PASSWORD,
-        "database": PG_DATABASE,
-        "port":     PG_PORT,
-    }),
+    {
+        PORT = 3000,
+        SERVER = `http://localhost:${PORT}`,
+    } = process.env,
+    c_app = express(),
+    c_uuid = uuid.v4;
 
-    select_data  =
-        async (req) =>
-        { try
-        { const
-            { lang } = req.params,  // lang = req.params.lang
-            { rows } = await c_pool.query
-            (`SELECT data from i18n($1::VARCHAR)`,
-                [lang]
-            );
-            // SQL-Injection: id='${lang}' => lang === `'; DELETE * FROM hello; SELECT '`
-            //console.log(rows);
-            return rows[0].data;
-        }
-        catch (error)
-        { console.log(error);
-            res.status(500).json({_type_: 'ERROR', _status_: 500, _message_: error.message});
-            // The error message should be stored in the database or somewhere else.
-            // To the user only a unique message id should be passed.
-        }
-        }
+
+c_app.use(function (req, res, next) {
+    res.setHeader('Content-Type', 'application/json');
+    res.header('Content-Type', 'application/json');
+    next();
+});
 
 // Middleware for debugging
-//c_app.use(morgan("combined"));
+c_app.use(morgan("combined"));
 
+// Middleware for debugging
 /*
 c_app.use
 ( function (req, res, next)
-  { console.log(req);
+  { console.log(req.params, req.headers);
     next();
   }
 );
 */
 
-c_app.get
-( '/',
-    (req, res) =>
-    { res.sendFile('./index.html', {root: c_dirname }); }
-);
+// Middleware that automatically converts incoming data into JSON:
+c_app.use(express.json());
 
-c_app.get
-( '/v1/:lang',
-    async (req, res) =>
-        res.status(200).json(await select_data(req))
-);
+c_app.use('/v1', auth);
+c_app.use('/v1/accounts', accounts);
 
-c_app.get
-( '/v1/:lang/:type',
-    async (req, res) =>
-    { const { type } = req.params
-        res.status(200).json((await select_data(req))[type])
+// For testing purposes sometimes a uuid is needed.
+c_app.get('/v1/uuid', (req, res) => res.status(200).json(c_uuid()));
+
+c_app.use((error, req, res, next) => {
+        if (error instanceof ValidationError) {
+            res.status(400).send(error.validationErrors);
+            next();
+        } else {
+            next(error);
+        }
     }
 );
 
