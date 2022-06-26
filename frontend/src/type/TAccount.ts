@@ -5,10 +5,12 @@
  */
 
 type TAccount =
-    {
-        id: string,
-        password: string | undefined,
-        email: string | undefined,
+    { id:       string,
+        user:     string|undefined,
+        password: string|undefined,
+        name:     string|undefined,
+        email:    string|undefined,
+        isAdmin:  boolean,
     }
 
 export default TAccount

@@ -94,7 +94,9 @@ const
                                     (session.token, // null
                                         paths.login,
                                         {
-                                            user: user.email
+                                            user: user.user
+                                                ? user.user.trim()
+                                                : user.email
                                                     ? user.email.trim()
                                                     : null,
                                             password: user.password ? user.password.trim() : '',
@@ -106,6 +108,7 @@ const
                                     c_token = (res.token as string),
                                     c_payload = jwt_decode(c_token) as unknown as TStringRecord;
                                 session.token = c_token;
+                                session.isAdmin = c_payload.isAdmin === 'true';
 
                                 await getUser(c_payload.id);
                                 user.password = undefined; // don't store the password

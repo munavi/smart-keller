@@ -47,10 +47,8 @@ const
                         if (c_token != null && session.token == null)
                         { reset() } // auto logout if no new token had be passed to the client
 
-
-                        // Wenn man kein Admin hat, soll doch noch entcoded werden???
-                        // if (session.token != null)
-                        // { session.isAdmin = ((jwt_decode(c_token ?? "") as { isAdmin: boolean })?.isAdmin)}
+                        if (session.token != null)
+                        { session.isAdmin = ((jwt_decode(c_token ?? "") as { isAdmin: boolean })?.isAdmin)}
                     }
 
                 return { session, reset, saveSessionInfo }

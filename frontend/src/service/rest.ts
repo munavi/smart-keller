@@ -4,8 +4,8 @@
  * @license   MIT
  */
 
-import type TJsonAtom from '../interface/TJsonAtom'
-import type TStringRecord from '../interface/TStringRecord';
+import type TJsonAtom from '../type/TJsonAtom'
+import type TStringRecord from '../type/TStringRecord';
 
 const
   f_options = 

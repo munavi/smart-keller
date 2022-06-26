@@ -10,8 +10,11 @@ const defaultAccount =
 (): TAccount =>
 { return {
     id:       '',
+    user:     undefined,
     password: undefined,
+    name:     undefined,
     email:    undefined,
+    isAdmin:  false,
   }
 }
 

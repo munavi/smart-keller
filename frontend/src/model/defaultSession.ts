@@ -11,6 +11,7 @@ const defaultSession =
 { return {
     token:        null,
     errorMessage: null,
+    isAdmin:      false,
   }
 }
 
