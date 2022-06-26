@@ -11,8 +11,8 @@ import config from '../json/config.json'
 
 import defaultSession from '../model/defaultSession'
 
-import type TErrorMessages from '../interface/TErrorMessages'
-import type TStringRecord  from '../interface/TStringRecord'
+import type TErrorMessages from '../type/TErrorMessages'
+import type TStringRecord  from '../type/TStringRecord'
 
 import jwt_decode from 'jwt-decode'
 
@@ -47,8 +47,10 @@ const
                         if (c_token != null && session.token == null)
                         { reset() } // auto logout if no new token had be passed to the client
 
-                        if (session.token != null)
-                        { session.isAdmin = ((jwt_decode(c_token ?? "") as { isAdmin: boolean })?.isAdmin)}
+
+                        // Wenn man kein Admin hat, soll doch noch entcoded werden???
+                        // if (session.token != null)
+                        // { session.isAdmin = ((jwt_decode(c_token ?? "") as { isAdmin: boolean })?.isAdmin)}
                     }
 
                 return { session, reset, saveSessionInfo }

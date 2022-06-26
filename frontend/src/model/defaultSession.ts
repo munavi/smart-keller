@@ -4,14 +4,13 @@
  * @license   MIT
  */
 
-import type ISession from '@/interface/ISession'
+import type TSession from '../type/TSession'
 
 const defaultSession =
-() : ISession =>
+() : TSession =>
 { return {
     token:        null,
     errorMessage: null,
-    isAdmin:      false,
   }
 }
 

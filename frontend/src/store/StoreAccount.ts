@@ -9,7 +9,7 @@ import {reactive} from 'vue'
 
 import config from '../json/config.json'
 
-import type IAccount from '../interface/IAccount'
+import type TAccount from '../type/TAccount'
 
 import StoreSession from '../store/StoreSession'
 import defaultAccount from '../model/defaultAccount'
@@ -36,7 +36,7 @@ const
                     saveSessionInfo =
                         storeSession.saveSessionInfo,
 
-                    data: { section: string, account: IAccount, accounts: Array<IAccount> } =
+                    data: { section: string, account: TAccount, accounts: Array<TAccount> } =
                         reactive({section: 'accounts', account: defaultAccount(), accounts: []}),
 
                     reset =
@@ -73,7 +73,7 @@ const
                         },
 
                     newAccount =
-                        async (account: IAccount) => // should be done by put
+                        async (account: TAccount) => // should be done by put
                         {
                             console.log(account);
                             const res = await postJson(session.token, paths.accounts, account);
@@ -82,7 +82,7 @@ const
                         },
 
                     putAccount =
-                        async (account: IAccount) => {
+                        async (account: TAccount) => {
                             const res = await putJson(session.token, `${paths.accounts}/${account.id}`, account);
                             saveSessionInfo(res);
                             return res.status === 200

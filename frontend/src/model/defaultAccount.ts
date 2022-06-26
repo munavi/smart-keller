@@ -4,17 +4,14 @@
  * @license   MIT
  */
 
-import type IAccount from '../interface/IAccount'
+import type TAccount from '../type/TAccount'
 
 const defaultAccount =
-(): IAccount =>
+(): TAccount =>
 { return {
     id:       '',
-    user:     undefined,
     password: undefined,
-    name:     undefined,
     email:    undefined,
-    isAdmin:  false,
   }
 }
 
