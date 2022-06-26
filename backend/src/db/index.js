@@ -7,12 +7,13 @@ const
         PG_DATABASE = 'account',
         PG_PORT     =  5432,
     }               = process.env,
-    c_pool          = new pg.Pool({'host':     PG_HOST,
+    c_pool          = new pg.Pool({
+                                        'host':     PG_HOST,
                                         'user':     PG_USER,
                                         'password': PG_PASSWORD,
                                         'database': PG_DATABASE,
                                         'port':     PG_PORT,
-    }),
+                                  }),
 
     query =
         async (p_sql, p_params) =>

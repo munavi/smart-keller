@@ -1,6 +1,5 @@
 // see https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs
 import jwt          from 'jsonwebtoken'
-import jwt_decode   from 'jwt-decode'
 import {getIsAdmin} from '../db/auth.js'
 
 const
