@@ -5,9 +5,13 @@
  * @license   MIT
  */
 import StoreUser from '../../frontend/src/store/StoreUser'
+import Router from "./router";
 
 const
-    storeUser = StoreUser()
+    router    = Router(),
+    storeUser = StoreUser();
+
+
 
 </script>
 

@@ -25,8 +25,8 @@
 
 
 import {ref} from 'vue'
-import Menu from "@/components/sidebar/menu/Menu.vue";
-import LogOutButton from "@/components/buttons/LogOutButton.vue";
+import Menu from "../../components/sidebar/menu/Menu.vue";
+import LogOutButton from "../../components/buttons/LogOutButton.vue";
 
 const is_expanded = ref(localStorage.getItem("is_expanded") === "true");
 const menuToggle = () => {

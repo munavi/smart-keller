@@ -20,7 +20,7 @@ import {postJson, getJson, putJson, deleteJson} from '../service/rest'
 const
     StoreAccount =
         defineStore
-        ('smart-keller',
+        ('account',
 
             () => {
                 const

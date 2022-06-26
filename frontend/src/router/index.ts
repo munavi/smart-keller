@@ -36,11 +36,7 @@ const
                     },
 
                 routes =
-                    [{
-                        path: '/',
-                        name: 'Home',
-                        component: () => import('../pages/loginPage/LoginPage.vue'),
-                    },
+                    [
                         {
                             beforeEnter: ifNotAuthorized,
                             path: '/login',
@@ -62,6 +58,7 @@ const
                         {
                             beforeEnter: ifAuthorized,
                             path: '/:pathMatch(.*)',
+                            name: 'Page404',
                             component: () => import('../pages/page404/Page404.vue'),
                         },
                     ]

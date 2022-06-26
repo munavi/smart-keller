@@ -1,7 +1,7 @@
 <template>
   <h3>Menu</h3>
   <div class="menu">
-    <router-link to="/" class="button">
+    <router-link to="/dashboard" class="button">
       <span class="material-icons">home</span>
       <span class="text">Dashboard</span>
     </router-link>

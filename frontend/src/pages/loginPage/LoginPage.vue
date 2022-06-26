@@ -40,16 +40,17 @@ import Router from "../../router";
 import StoreUser from "../../store/StoreUser";
 
 const
-    router    = Router(),
+    router = Router(),
     storeUser = StoreUser(),
-    user      = storeUser.user,
-    login     = storeUser.login,
-    error     = ref(false),
-    doLogin   = async () =>
-    { const success = await login();
+    user = storeUser.user,
+    login = storeUser.login,
+    error = ref(false),
+    doLogin = async () => {
+      const success = await login();
       error.value = !success;
-      if (success)
-      { await router.push('/dashboard') }
+      if (success) {
+        await router.push('/dashboard')
+      }
     }
 
 
@@ -105,22 +106,11 @@ const passwordHandler = (event: any) => {
 }
 
 const handleLoginClick = async () => {
-  /**
-   * Sobald Datenbank eingebunden wird, soll man Authorisierung Prozess durchführen
-   */
-
-  const falsePassword: string = "das Passwort ist falsch";
-  const notUser: string = "Nutzer existiert nicht";
-  const loginError: string = "Ein Fehler ist aufgetreten. Bitte versuche es spaeter erneut";
-  console.log("BlablaLOgin");
-  console.log(user.email);
-  console.log(user.password);
   await doLogin();
-
 };
 
 </script>
 
 <style scoped lang="scss">
-@import "../../css/pages/loginPage/LoginPage";
+@import "../../css/pages/loginPage/LoginPage.scss";
 </style>
