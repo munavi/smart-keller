@@ -45,6 +45,7 @@ const
                     reset =
                         () => {
                             storeSession.reset();
+                            console.log("reser storeUSer");
                             Object.assign(user, defaultAccount());
                         },
 
@@ -52,6 +53,7 @@ const
                         async (id: string) => {
                             const res = await getJson(session.token, `${paths.accounts}/${id}`);
                             saveSessionInfo(res);
+                            console.log("storeuser getUSer");
                             Object.assign(user,
                                 (res.status === 200)
                                     ? (res.data as unknown as TAccount)
@@ -88,6 +90,7 @@ const
 
                     login =
                         async () => {
+                            console.log("storeuser login");
                             const
                                 res =
                                     await postJson

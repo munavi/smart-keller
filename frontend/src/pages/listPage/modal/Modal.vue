@@ -28,10 +28,9 @@
 
 <script setup lang="ts">
 
-import Category from "@/pages/listPage/modal/form/category/Category.vue";
-import Counter from "@/pages/listPage/modal/form/counter/Counter.vue";
-import ExpirationDate from "@/pages/listPage/modal/form/expirationDate/ExpirationDate.vue";
-import StoragePlace from "@/pages/listPage/modal/form/storagePlace/StoragePlace.vue";
+import Category from "../modal/form/category/Category.vue";
+import ExpirationDate from "../modal/form/expirationDate/ExpirationDate.vue";
+import StoragePlace from "../modal/form/storagePlace/StoragePlace.vue";
 
 const props = defineProps
 ({
