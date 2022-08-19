@@ -1,20 +1,4 @@
 # Important Commands
-
-## Projekt mit Gitlab verwalten
-
-```bash
-git clone https://gitlab.multimedia.hs-augsburg.de/kowa/wk_hello_world_fullstack.git
-```
-
-package.json anpassen
-
-```bash
-git remote -v
-git remote remove origin
-git remote add origin https://gitlab.multimedia.hs-augsburg.de/<ACCOUNT>/hello_world_fullstack.git
-git push -u origin master
-```
-
 ## Docker
 
 To build and run all the containers (important for development, when changes to docker-compose.yml have been made)
